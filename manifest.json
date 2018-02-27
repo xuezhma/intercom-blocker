@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Intercom Blocker",
+  "description": "Block Intercom everywhere. Prevent Intercom integration from initializing itself.",
+  "version": "1.0.0",
+  "icons": {
+      "16": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+  },
+  "content_scripts": [
+      {
+          "matches": ["https://*/*", "http://*/*"],
+          "js": ["js/index.js"]
+      }
+  ],
+  "author": "Xuezheng Ma",
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_title": "Intercom Blocker"
+  },
+
+  "permissions": [
+    "https://*/*"
+  ]
+}
